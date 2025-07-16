@@ -1,0 +1,17 @@
+@use "./fonts";
+@use "./base";
+@use "../components/header/header";
+@use "../components/menu/menu";
+@use "../components/ui/style/index";
+@use "../components/cart/cart";
+
+@use "./views/colors";
+
+@media (min-width: 993px) {
+	.header__menu,
+	.hero__title,
+	.menu,
+	.catalog__filters {
+		display: none;
+	}
+}

@@ -1,0 +1,8 @@
+//- [Header]: Правое
+div.header__right
+	//- [Header]: Телефон
+	include ../ui/phone.pug
+
+	//- [Header]: Действия
+	include ../ui/actions.pug
+	+actions({search: true, profile: true, favorites: true, cart: true})

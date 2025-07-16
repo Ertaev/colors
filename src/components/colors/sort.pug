@@ -1,0 +1,31 @@
+-
+	const sortItems = [
+		{
+			id: "priceAsc",
+			title: "Сначала дорогие",
+			class: "catalog__sort-option--active",
+		},
+		{
+			id: "priceDesc",
+			title: "Сначала недорогие",
+		},
+		{
+			id: "popularity",
+			title: "Сначала популярные",
+		},
+		{
+			id: "newest",
+			title: "Сначала новые",
+		},
+	];
+
+div.catalog__sort
+	button.catalog__sort-toggle
+		span Сначала дорогие
+
+		svg(width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg")
+			path(d="M5 7.5L8.4641 3L1.5359 3L5 7.5Z" fill="#202020")
+
+	div.catalog__sort-dropdown
+		each sortItem in sortItems
+			div.catalog__sort-option(class=sortItem.class data-sort=sortItem.id)= sortItem.title

@@ -1,0 +1,48 @@
+extends ./layout.pug
+
+block content
+	//- [Главная секция]: Главная
+	section.hero
+
+		div.container
+			div.hero__inner
+				//- [Главная секция]: Хлебные крошки
+				include ../components/ui/breadcrumbs.pug
+				+breadcrumbs([
+					{ name: 'Главная', url: '/' },
+					{ name: 'Продукты', url: '/' },
+					{ name: 'Краски' }
+				])
+
+				h1.hero__title Краски
+
+		//- [Главная секция]: Слайдер
+		include ../components/colors/slider.pug
+
+	//- [Секция Каталог]: Каталог
+	section.main
+		div.container
+			div.main__inner
+
+				//- [Секция Каталог]: Фильтры
+				include ../components/colors/filters.pug
+
+				//- [Секция Каталог]: Каталог
+				div.catalog
+
+					//- [Секция Каталог]: Количество и Сортировка товаров
+					div.catalog__head
+						button.catalog__filters Фильтры
+
+						p.catalog__items 0 товаров
+						
+						//- [Секция Каталог]: Сортировка
+						include ../components/colors/sort.pug
+
+					//- [Секция Каталог]: Товары
+					div.catalog__list
+
+						include ../components/ui/loader.pug
+
+block scripts
+	script(type="module", src="../js/colors/index.js")

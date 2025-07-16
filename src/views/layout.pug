@@ -1,0 +1,16 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title Colors
+
+	body
+		include ../components/header/header.pug
+		include ../components/menu/menu.pug
+		include ../components/cart/cart.pug
+
+		block content
+
+		script(type="module", src="../js/main.js")
+		block scripts

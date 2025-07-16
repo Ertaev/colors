@@ -1,0 +1,24 @@
+{
+  "name": "colors",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/views/*.pug",
+    "build": "parcel build src/views/*.pug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.15.4",
+    "@parcel/transformer-sass": "^2.15.4",
+    "buffer": "^6.0.3",
+    "parcel": "^2.15.4",
+    "sass": "^1.89.2"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "axios": "^1.10.0"
+  }
+}

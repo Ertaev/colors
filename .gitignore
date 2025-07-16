@@ -1,0 +1,16 @@
+#pacel
+.parcel-cache/
+dist/
+
+#dependencies
+node_modules/
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example

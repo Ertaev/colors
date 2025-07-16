@@ -1,0 +1,10 @@
+div.menu
+	//- [Menu]: Действия
+	include ../ui/actions.pug
+	+actions({search: true, profile: true, favorites: true, cart: false})
+
+	//- [Menu]: Навигация
+	include ../ui/nav.pug
+
+	//- [Menu]: Телефон
+	include ../ui/phone.pug

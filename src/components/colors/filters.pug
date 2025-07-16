@@ -1,0 +1,35 @@
+-
+	const filters = [
+		{
+			id: "novinki",
+			title: "Новинки",
+		},
+		{
+			id: "instock",
+			title: "Есть в наличии",
+		},
+		{
+			id: "contract",
+			title: "Контрактные",
+		},
+		{
+			id: "exclusive",
+			title: "Эксклюзивные",
+		},
+		{
+			id: "sale",
+			title: "Распродажа",
+		},
+	];
+
+div.filters
+	//- [Фильтры]: Фильтры
+	ul.filters-nav
+		each filter in filters
+			//- [Фильтры]: Фильтр
+			li.filters-nav__item
+				label.switch
+					input(id=filter.id, type="checkbox")
+					span.slider.round
+
+				label.filter-label(for=filter.id)= filter.title

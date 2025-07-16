@@ -1,0 +1,45 @@
+//- [Корзина]: Корзина
+div.cart
+
+	//- [Корзина]: Верхний блок
+	div.cart__header
+		h2.cart__title Корзина
+
+		button.cart__close(data-modal-close="cart")
+
+	//- [Корзина]: Пустая корзина
+	div.cart__empty(style="display: none;")
+		h4.cart__empty-title В корзине пусто
+
+		button.cart__empty-button(data-modal-close="cart")
+			svg(width="6" height="10" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg")
+				path(d="M21 1L1 21L21 41" stroke="#1f2020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+			| Вернуться к покупкам
+
+	//- [Корзина]: Основной контент
+	div.cart__body
+
+		//- [Основной контент]: Верхний блок
+		div.cart__wrap
+			//- [Основной контент]: Шапка
+			div.cart__wrap-header
+				p.cart__wrap-counter 0 товаров
+
+				button.cart__wrap-clear очистить список
+
+			//- [Основной контент]: Товары
+			div.cart__list-box
+				ul.cart__list
+
+					//- [Основной контент]: Товар
+					//- li.cart__item
+
+		//- [Основной контент]: Нижний блок
+		div.cart__footer
+			div.cart__total
+				span Итого
+				p
+					b 0
+					|₽
+
+			button.cart__order-button Оформить заказ
